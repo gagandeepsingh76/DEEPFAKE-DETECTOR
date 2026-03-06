@@ -1,16 +1,23 @@
-# DeepFake Detection System
+# 🧠 DeepFake Detection System
 
-A production-grade deepfake detection system featuring novel dual-path architecture with ASCII conversion and temporal fusion for enhanced accuracy and computational efficiency.
+A **production-grade deepfake detection system** featuring a **novel dual-path architecture with ASCII conversion and temporal fusion** for enhanced accuracy and computational efficiency.
 
-![DeepFake Detector](https://img.shields.io/badge/AI-DeepFake%20Detection-blue) ![Status](https://img.shields.io/badge/Status-Production%20Ready-green) ![Accuracy](https://img.shields.io/badge/Accuracy-96.3%25-brightgreen)
+![DeepFake Detector](https://img.shields.io/badge/AI-DeepFake%20Detection-blue)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-green)
+![Accuracy](https://img.shields.io/badge/Accuracy-96.3%25-brightgreen)
 
-## 🚀 Live Demo
+---
 
-**[View Live Application](https://ascii-deepfake-detection.netlify.app)**
+# 🚀 Live Demo
 
-## 🏗️ Architecture Overview
+🔗 **Live Application:**  
+https://ascii-deepfake-detection.netlify.app
 
-### Novel Dual-Path Feature Extraction
+---
+
+# 🏗️ Architecture Overview
+
+## Novel Dual-Path Feature Extraction
 
 ```
 Video Input → Frame Extraction → Face Detection & Alignment
@@ -30,28 +37,32 @@ Feature Fusion Network (Attention-based Gates)
 → Sigmoid Classifier (Real/Fake)
 ```
 
-## ✨ Key Innovations
+---
 
-### 🎯 ASCII Conversion Layer
-- **65% compute reduction** vs traditional pixel processing
-- Real-time frame-to-ASCII transformation
-- Custom character density mapping (128-bit patterns)
-- Novel approach to deepfake detection
+# ✨ Key Innovations
 
-### 🔍 Beadal Feature Extraction
-- Novel texture descriptor for compression artifacts
-- Hybrid edge-frequency analysis
-- Enhanced detection of subtle manipulation artifacts
+## 🎯 ASCII Conversion Layer
+- **65% compute reduction** vs traditional pixel processing  
+- Real-time frame-to-ASCII transformation  
+- Custom character density mapping (128-bit patterns)  
+- Novel approach to deepfake detection  
 
-### 🧠 Cross-Model Fusion
-- Weighted feature concatenation (InceptionResNetV2 + EfficientNet-B4)
-- Attention-based fusion gates
-- BiLSTM temporal sequence modeling
+## 🔍 Beadal Feature Extraction
+- Novel texture descriptor for compression artifacts  
+- Hybrid edge-frequency analysis  
+- Enhanced detection of subtle manipulation artifacts  
 
-## 📊 Performance Metrics
+## 🧠 Cross-Model Fusion
+- Weighted feature concatenation (InceptionResNetV2 + EfficientNet-B4)  
+- Attention-based fusion gates  
+- BiLSTM temporal sequence modeling  
+
+---
+
+# 📊 Performance Metrics
 
 | Metric | Value |
-|--------|-------|
+|------|------|
 | **Accuracy** | 96.3% (FaceForensics++ c23) |
 | **Throughput** | 127 videos/hour |
 | **Inference Speed** | 0.42s per frame |
@@ -59,128 +70,165 @@ Feature Fusion Network (Attention-based Gates)
 | **Model Size** | <500MB (quantized) |
 | **Uptime** | 99.7% |
 
-## 🛠️ Technology Stack
+---
 
-### Frontend
-- **React 18** with TypeScript
-- **Tailwind CSS** for styling
-- **Framer Motion** for animations
-- **Recharts** for data visualization
-- **Lucide React** for icons
+# 🛠️ Technology Stack
 
-### Backend (Simulated)
-- **FastAPI** for REST API
-- **Python 3.9+** with async support
-- **OpenCV** for video processing
-- **PyTorch** for deep learning models
+## Frontend
+- React 18 with TypeScript  
+- Tailwind CSS  
+- Framer Motion  
+- Recharts  
+- Lucide React  
 
-### Models & Algorithms
-- **InceptionResNetV2** (Path A)
-- **EfficientNet-B4** (Path B)
-- **BiLSTM** for temporal analysis
-- **MTCNN** for face detection
-- **Custom ASCII Converter**
-- **Beadal Feature Extractor**
+## Backend (Simulated)
+- FastAPI REST API  
+- Python 3.9+  
+- OpenCV for video processing  
+- PyTorch for deep learning  
 
-## 🚀 Quick Start
+## Models & Algorithms
+- InceptionResNetV2  
+- EfficientNet-B4  
+- BiLSTM Temporal Model  
+- MTCNN Face Detection  
+- Custom ASCII Converter  
+- Beadal Feature Extractor  
 
-### Prerequisites
-- Node.js 18+ and npm
-- Modern web browser
-- (For backend) Python 3.9+, CUDA-capable GPU
+---
 
-### Installation
+# 🚀 Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd deepfake-detection-system
-   ```
+## Prerequisites
+- Node.js 18+  
+- npm  
+- Modern Web Browser  
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+Optional backend requirements:
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
+- Python 3.9+
+- CUDA-capable GPU
 
-4. **Open in browser**
-   ```
-   http://localhost:5173
-   ```
+---
 
-### Production Build
+## Installation
+
+### 1 Clone Repository
+
+```bash
+git clone <repository-url>
+cd deepfake-detection-system
+```
+
+### 2 Install Dependencies
+
+```bash
+npm install
+```
+
+### 3 Start Development Server
+
+```bash
+npm run dev
+```
+
+### 4 Open in Browser
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🏗️ Production Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## 📁 Project Structure
+---
+
+# 📂 Project Structure
 
 ```
-deepfake-detection-system/
-├── src/
-│   ├── components/           # React components
-│   │   ├── Header.tsx       # Navigation header
-│   │   ├── VideoUpload.tsx  # File upload interface
-│   │   ├── AnalysisDashboard.tsx  # Results visualization
-│   │   └── SystemMonitor.tsx      # Performance monitoring
-│   ├── backend/             # Python backend (simulated)
-│   │   ├── core/           # Core detection algorithms
-│   │   │   ├── ascii_converter.py    # Novel ASCII conversion
-│   │   │   ├── feature_extractor.py  # Dual-path extraction
-│   │   │   ├── fusion_network.py     # Feature fusion
-│   │   │   └── temporal_analyzer.py  # BiLSTM analysis
-│   │   ├── utils/          # Utility modules
-│   │   │   ├── face_detector.py      # MTCNN face detection
-│   │   │   └── video_processor.py    # Video preprocessing
-│   │   └── main.py         # FastAPI server
-│   ├── types/              # TypeScript type definitions
-│   └── App.tsx            # Main application component
-├── public/                 # Static assets
-└── dist/                  # Production build
+deepfake-detection-system
+│
+├── src
+│   │
+│   ├── components
+│   │   ├── Header.tsx
+│   │   ├── VideoUpload.tsx
+│   │   ├── AnalysisDashboard.tsx
+│   │   └── SystemMonitor.tsx
+│   │
+│   ├── backend
+│   │   │
+│   │   ├── core
+│   │   │   ├── ascii_converter.py
+│   │   │   ├── feature_extractor.py
+│   │   │   ├── fusion_network.py
+│   │   │   └── temporal_analyzer.py
+│   │   │
+│   │   ├── utils
+│   │   │   ├── face_detector.py
+│   │   │   └── video_processor.py
+│   │   │
+│   │   └── main.py
+│   │
+│   ├── types
+│   │
+│   └── App.tsx
+│
+├── public
+│
+├── dist
+│
+└── README.md
 ```
 
-## 🎯 Features
+---
 
-### 🎬 Video Analysis
-- **Multi-format support**: MP4, AVI, MOV, MKV, WebM
-- **Real-time processing**: Frame-by-frame analysis
-- **Face detection**: MTCNN-based alignment
-- **Temporal consistency**: BiLSTM sequence modeling
+# 🎯 Features
 
-### 📊 Comprehensive Reporting
-- **Overall authenticity score** with confidence metrics
-- **Frame-by-frame analysis** with confidence tracking
-- **ASCII pattern previews** for explainability
-- **Temporal anomaly detection** with localization
-- **Model performance metrics** across all components
+## 🎬 Video Analysis
+- Multi-format video support (MP4, AVI, MOV, MKV, WebM)  
+- Real-time frame-by-frame processing  
+- MTCNN-based face detection  
+- BiLSTM temporal modeling  
 
-### 🖥️ System Monitoring
-- **Real-time performance** tracking
-- **GPU utilization** monitoring
-- **Processing queue** management
-- **Model accuracy** drift detection
-- **System health** alerts
+## 📊 Comprehensive Reporting
+- Authenticity score with confidence metrics  
+- Frame-by-frame analysis  
+- ASCII pattern previews  
+- Temporal anomaly detection  
+- Model performance metrics  
 
-### 🎨 User Experience
-- **Drag-and-drop** file upload
-- **Real-time progress** tracking
-- **Interactive visualizations** with Recharts
-- **Responsive design** for all devices
-- **Production-grade UI** with smooth animations
+## 🖥️ System Monitoring
+- Real-time system performance tracking  
+- GPU utilization monitoring  
+- Processing queue management  
+- Model accuracy drift detection  
+- System health alerts  
 
-## 🔬 Technical Details
+## 🎨 User Experience
+- Drag and drop file upload  
+- Real-time progress indicators  
+- Interactive visualizations  
+- Responsive UI design  
+- Smooth animations  
 
-### ASCII Conversion Algorithm
+---
+
+# 🔬 Technical Details
+
+## ASCII Conversion Algorithm
+
 ```python
-# Novel ASCII conversion reduces compute by 65%
-ascii_chars = [' ', '.', ':', '-', '=', '+', '*', '#', '%', '@', 
-               '░', '▒', '▓', '█', '▄', '▀', '■', '□', '●', '○']
+ascii_chars = [
+' ', '.', ':', '-', '=', '+', '*', '#', '%', '@',
+'░', '▒', '▓', '█', '▄', '▀', '■', '□', '●', '○'
+]
 
 def convert_to_ascii(image, target_width=40):
     # Density-based character mapping
@@ -188,141 +236,192 @@ def convert_to_ascii(image, target_width=40):
     # Compression-aware transformation
 ```
 
-### Beadal Feature Extraction
-- **Edge features**: Sobel, Canny operators
-- **Frequency features**: DCT-based analysis
-- **Texture features**: Local Binary Patterns
-- **Compression artifacts**: JPEG block detection
+---
 
-### Fusion Network Architecture
+## Beadal Feature Extraction
+
+- Sobel edge features  
+- Canny edge detection  
+- DCT frequency analysis  
+- Local Binary Pattern textures  
+- JPEG compression artifact detection  
+
+---
+
+## Fusion Network Architecture
+
 ```python
-# Attention-based feature fusion
 attention_gates = calculate_attention_gates(path_a, path_b, beadal)
 fused_features = weighted_concatenation(features, attention_gates)
 temporal_features = bilstm_analysis(fused_features)
 prediction = sigmoid_classifier(temporal_features)
 ```
 
-## 📈 Performance Benchmarks
+---
 
-### Dataset Performance
-- **FaceForensics++ (c23)**: 96.8% accuracy
-- **Celeb-DF**: 94.2% accuracy
-- **DFDC Preview**: 91.5% accuracy
+# 📈 Performance Benchmarks
 
-### Processing Speed
-- **Frame extraction**: 120fps
-- **Face detection**: 50fps
-- **Feature extraction**: 45ms/frame (Inception), 32ms/frame (EfficientNet)
-- **Temporal analysis**: 8ms/frame
-- **Overall pipeline**: 2.4fps end-to-end
+## Dataset Performance
 
-### Resource Utilization
-- **GPU memory**: 4.2GB (NVIDIA T4)
-- **CPU usage**: 15-25%
-- **Memory usage**: 150MB/video
-- **Storage**: 45.7% utilization
+- FaceForensics++ (c23): **96.8% accuracy**  
+- Celeb-DF: **94.2% accuracy**  
+- DFDC Preview: **91.5% accuracy**
 
-## 🔧 Configuration
+---
 
-### Environment Variables
+## Processing Speed
+
+- Frame extraction: **120fps**  
+- Face detection: **50fps**  
+- Feature extraction: **45ms/frame (Inception)**  
+- EfficientNet extraction: **32ms/frame**  
+- Temporal analysis: **8ms/frame**  
+- End-to-end pipeline: **2.4fps**
+
+---
+
+## Resource Utilization
+
+- GPU Memory: **4.2GB (NVIDIA T4)**  
+- CPU Usage: **15-25%**  
+- Memory Usage: **150MB/video**  
+- Storage Usage: **45.7%**
+
+---
+
+# ⚙️ Configuration
+
+## Environment Variables
+
 ```bash
-# API Configuration
 VITE_API_URL=http://localhost:8000
 VITE_MAX_FILE_SIZE=500MB
 
-# Model Configuration
 MODEL_BATCH_SIZE=32
 GPU_MEMORY_FRACTION=0.8
 PROCESSING_TIMEOUT=300
 ```
 
-### Model Parameters
+---
+
+## Model Parameters
+
 ```python
-# Dual-path configuration
 INCEPTION_FEATURES_DIM = 1536
 EFFICIENTNET_FEATURES_DIM = 1792
 BEADAL_FEATURES_DIM = 128
 
-# Temporal analysis
 LSTM_UNITS = 64
 SEQUENCE_LENGTH = 16
 ATTENTION_DIM = 256
 ```
 
-## 🚀 Deployment
+---
 
-### Netlify (Current)
-The application is deployed on Netlify with automatic builds from the main branch.
+# 🚀 Deployment
 
-### Production Deployment Options
+## Netlify
 
-#### Docker
+Currently deployed using **Netlify with automatic builds**.
+
+---
+
+## Docker Deployment
+
 ```bash
-# Build container
 docker build -t deepfake-detector .
-
-# Run with GPU support
 docker run --gpus all -p 8000:8000 deepfake-detector
 ```
 
-#### Kubernetes
+---
+
+## Kubernetes Deployment
+
 ```yaml
-# Helm chart available for production deployment
 helm install deepfake-detector ./charts/deepfake-detector
 ```
 
-#### AWS
+---
+
+## AWS Deployment
+
 ```bash
-# Terraform configuration included
 terraform init
 terraform plan
 terraform apply
 ```
 
-## 📊 Monitoring & Observability
+---
 
-### Metrics Tracked
-- **Detection accuracy** across different manipulation types
-- **Processing latency** per pipeline stage
-- **GPU utilization** and memory usage
-- **Queue length** and throughput
-- **Model drift** detection
-- **Error rates** and system health
+# 📊 Monitoring & Observability
 
-### Alerting
-- **Accuracy degradation** alerts
-- **High latency** warnings
-- **Resource exhaustion** notifications
-- **Model drift** detection
+## Metrics Tracked
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow TypeScript best practices
-- Maintain test coverage >90%
-- Use conventional commit messages
-- Update documentation for new features
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **FaceForensics++** dataset for training and evaluation
-- **PyTorch** and **React** communities
-- **OpenCV** for computer vision utilities
-- **Netlify** for hosting and deployment
+- Detection accuracy  
+- Processing latency  
+- GPU utilization  
+- Queue length and throughput  
+- Model drift detection  
+- System health  
 
 ---
 
-**Built with ❤️ for AI Security and Digital Trust**
+## Alerting
 
-*Protecting digital media integrity through advanced machine learning and novel algorithmic approaches.*
+- Accuracy degradation alerts  
+- High latency warnings  
+- Resource exhaustion alerts  
+- Model drift detection  
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repository  
+2. Create a feature branch  
+
+```
+git checkout -b feature/amazing-feature
+```
+
+3. Commit your changes  
+
+```
+git commit -m "Add amazing feature"
+```
+
+4. Push to branch  
+
+```
+git push origin feature/amazing-feature
+```
+
+5. Open Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 🙏 Acknowledgments
+
+- FaceForensics++ dataset  
+- PyTorch community  
+- React community  
+- OpenCV library  
+- Netlify hosting platform  
+
+---
+
+# 👨‍💻 Author
+
+**Gagandeep Singh**  
+Computer Science Student  
+Interested in Artificial Intelligence, Computer Vision, and Automation
+
+---
+
+⭐ **If you like this project, consider giving it a star on GitHub!**
