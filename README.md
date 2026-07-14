@@ -330,20 +330,6 @@ No empirical results are available in this repository yet.
 
 ## Visual Reports
 
-### Confusion Matrix Placeholder
-
-<p align="center">
-  <img src="./public/readme/confusion-matrix.png" alt="Confusion matrix placeholder" width="70%" />
-</p>
-
-### ROC Curve Placeholder
-
-<p align="center">
-  <img src="./public/readme/roc-curve.png" alt="ROC curve placeholder" width="70%" />
-</p>
-
-### Demo GIF Placeholder
-
 <p align="center">
   <img src="./public/readme/demo.gif" alt="Demo GIF placeholder" width="70%" />
 </p>
