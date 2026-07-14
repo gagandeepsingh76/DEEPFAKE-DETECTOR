@@ -274,12 +274,6 @@ Suggested future command shape:
 python src/backend/train.py --config configs/deepfake_detector.yaml
 ```
 
-## Inference Pipeline
-
-<p align="center">
-  <img src="./public/readme/prediction-flow.png" alt="Prediction flow diagram" width="92%" />
-</p>
-
 Current UI inference is simulated in `src/components/VideoUpload.tsx`. The user selects a video, the UI animates through the pipeline stages, and then it renders a mock `AnalysisResult`.
 
 Intended production inference flow:
